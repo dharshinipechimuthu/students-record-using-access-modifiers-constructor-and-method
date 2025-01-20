@@ -1,0 +1,68 @@
+# students-record-using-access-modifiers-constructor-and-method
+class Student {
+    private int id;
+    private String name;
+    private double grade;
+    public Student(int id, String name, double grade) {
+        this.id = id;
+        this.name = name;
+        this.grade = grade;
+    }
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public double getGrade() {
+        return grade;
+    }
+    public void setGrade(double grade) {
+        this.grade = grade;
+    }
+    public void displayStudentDetails() {
+        System.out.println("Student ID: " + id);
+        System.out.println("Student Name: " + name);
+        System.out.println("Student Grade: " + grade);
+    }
+}
+
+public class StudentRecord {
+    public static void main(String[] args) {
+        // Create Student object using constructor
+        Student student1 = new Student(101, "Alice", 89.5);
+        System.out.println("Student Details:");
+        student1.displayStudentDetail();
+        student1.setName("Alice Brown");
+        student1.setGrade(92.3);
+
+        System.out.println("\nUpdated Student Details:");
+        student1.displayStudentDetails();
+
+      System.out.println("\nAccessing individual properties:");
+        System.out.println("Student Name: " + student1.getName());
+        System.out.println("Student Grade: " + student1.getGrade());
+    }
+}
+
+ Output:
+
+Student Details:
+Student ID: 101
+Student Name: Alice
+Student Grade: 89.5
+
+Updated Student Details:
+Student ID: 101
+Student Name: Alice Brown
+Student Grade: 92.3
+
+Accessing individual properties:
+Student Name: Alice Brown
+Student Grade: 92.3
